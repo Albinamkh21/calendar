@@ -1,0 +1,27 @@
+parameters:
+
+
+services:
+
+
+  _defaults:
+
+    # https://symfony.com/doc/current/service_container.html#the-autowire-option
+    autowire: true
+
+    # https://symfony.com/doc/current/service_container.html#the-autoconfigure-option
+    autoconfigure: true
+
+
+  albinamkh\CalendarBundle\Repository\EventRepository: ~
+  albinamkh\CalendarBundle\Manager\EventManager: ~
+  albinamkh\CalendarBundle\Controller\EventController: ~
+  albinamkh\CalendarBundle\Controller\EditorController: ~
+  albinamkh\CalendarBundle\Facade\CalendarFacade: ~
+
+  # Фильтр Twig для форматирования даты
+  albinamkh\CalendarBundle\Twig\TwigRuDateFilter: ~
+
+
+
+
