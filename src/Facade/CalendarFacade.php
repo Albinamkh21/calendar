@@ -7,6 +7,8 @@ use albinamkh\CalendarBundle\Manager\EventManager;
 
 class CalendarFacade
 {
+
+    const EVENT_TYPE_LESSON =  1;
     public function __construct(private readonly EventManager $eventManager)
     {
     }
@@ -20,6 +22,12 @@ class CalendarFacade
     public function deleteEventBySourceId(int $sourceId, int $sourceType): bool
     {
         return $this->eventManager->deleteEventBySourceId($sourceId, $sourceType);
+
+    }
+
+    public function getEventsBySources(array $sources, int $sourceType): bool
+    {
+        return $this->eventManager->getAllEventsBySources($sources, $sourceType);
 
     }
 

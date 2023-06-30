@@ -88,6 +88,12 @@ class EventManager
     {
          return $this->eventRepository->findAll();
     }
+    public function getAllEventsBySources(array $sources, int $sourceType)
+    {
+        return $this->eventRepository->findAllBySource($sources, $sourceType);
+    }
+
+
 
 
 }
