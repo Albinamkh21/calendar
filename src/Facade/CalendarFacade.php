@@ -25,7 +25,7 @@ class CalendarFacade
 
     }
 
-    public function getEventsBySources(array $sources, int $sourceType): bool
+    public function getEventsBySources(array $sources, int $sourceType): array
     {
         return $this->eventManager->getAllEventsBySources($sources, $sourceType);
 
